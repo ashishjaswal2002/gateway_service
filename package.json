@@ -1,0 +1,20 @@
+{
+    "name": "gateway-service",
+    "version": "1.0.0",
+    "description": "GraphQL Gateway for microservices",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node src/index.js",
+        "dev": "nodemon src/index.js"
+    },
+    "dependencies": {
+        "@apollo/server": "^4.10.2",
+        "axios": "^1.6.8",
+        "dotenv": "^17.2.3",
+        "graphql": "^16.8.1",
+        "graphql-tag": "^2.12.6"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.0"
+    }
+}
