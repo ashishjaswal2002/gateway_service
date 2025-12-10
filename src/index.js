@@ -14,7 +14,7 @@ const startServer = async () => {
     const { url } = await startStandaloneServer(server, {
         listen: { port },
     });
-    console.log(`🚀  Gateway Service ready at: ${url}`);
+    console.log(`  Gateway Service ready at: ${url}`);
 };
 
 startServer();
