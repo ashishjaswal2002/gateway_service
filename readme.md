@@ -124,3 +124,10 @@ Live link->https://gateway-service-ruddy.vercel.app
 ├── vercel.json         # Vercel configuration
 └── package.json
 ```
+
+you have add create a .env file in the root directory and paste the content below
+--
+
+PORT=4000
+FOLLOW_SERVICE_URL=https://follow-service.vercel.app/api/v1
+----
