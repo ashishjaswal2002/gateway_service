@@ -35,6 +35,9 @@ const resolvers = {
     },
     Mutation: {
         followUser: async (_, { followerId, followingId }) => {
+            if (followerId === followingId) {
+                throw new Error("You cannot follow yourself.");
+            }
             try {
                 await axios.post(`${FOLLOW_SERVICE_URL}/follow`, {
                     followerId,
