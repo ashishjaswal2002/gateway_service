@@ -1,5 +1,6 @@
 const { ApolloServer } = require('@apollo/server');
 const { startStandaloneServer } = require('@apollo/server/standalone');
+const { ApolloServerPluginLandingPageLocalDefault } = require('@apollo/server/plugin/landingPage/default');
 require('dotenv').config();
 const typeDefs = require('./schema');
 const resolvers = require('./resolvers');
@@ -7,6 +8,8 @@ const resolvers = require('./resolvers');
 const server = new ApolloServer({
     typeDefs,
     resolvers,
+    introspection: true,
+    plugins: [ApolloServerPluginLandingPageLocalDefault()],
 });
 
 const startServer = async () => {
